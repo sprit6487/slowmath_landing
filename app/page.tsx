@@ -476,6 +476,17 @@ const apps: App[] = [
     tags: ["10의 보수", "받아올림 준비", "원 시각화"],
   },
   {
+    slug: "slowmath_color",
+    name: "Color",
+    korName: "색깔 익히기",
+    Icon: IconPalette,
+    category: "compare",
+    shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
+    value:
+      "발달 지연 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
+    tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
+  },
+  {
     slug: "slowmath_comparing",
     name: "Comparing",
     korName: "비교하기",
@@ -507,17 +518,6 @@ const apps: App[] = [
     value:
       "패턴 인식은 수학적 사고력의 핵심이에요. 과일·색깔·도형 패턴을 단계적으로 학습하고, 선택 잠금 기능으로 사고력을 키워줍니다.",
     tags: ["규칙 찾기", "빈칸 채우기", "과일·도형", "다음 예측"],
-  },
-  {
-    slug: "slowmath_color",
-    name: "Color",
-    korName: "색깔 익히기",
-    Icon: IconPalette,
-    category: "compare",
-    shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
-    value:
-      "발달 지연 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
-    tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
   },
   {
     slug: "slowmath_colorcopy",
