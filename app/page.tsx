@@ -602,7 +602,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
         border: `1.5px solid ${cat.borderColor}`,
         textDecoration: "none",
-        minHeight: 280,
+        minHeight: 420,
       }}
     >
       {/* Left: Screenshot */}
