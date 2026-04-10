@@ -942,6 +942,9 @@ export default function Page() {
             그 작은 성공이 독립의 자양분이 되도록 돕습니다.
             특수교사·언어치료사의 수업 보조 도구로도 활용됩니다.
           </p>
+          <p className="text-sm mt-4 font-semibold" style={{ color: "#5A9FD8" }}>
+            카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 직접 만들었습니다.
+          </p>
         </div>
       </section>
 
