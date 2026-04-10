@@ -626,7 +626,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       <div className="flex flex-col" style={{ flex: 1, minWidth: 0 }}>
         {/* Header */}
         <div
-          className="flex items-center gap-2 px-4 py-4"
+          className="flex items-center gap-2 px-4 py-5"
           style={{ background: cat.bgColor, borderBottom: `1px solid ${cat.borderColor}` }}
         >
           <div
