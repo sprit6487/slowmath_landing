@@ -848,6 +848,28 @@ export default function Page() {
             <strong style={{ color: "#4A4035" }}>올바르게</strong> 쌓도록 설계된 학습 도구입니다.
           </p>
 
+          {/* CTA */}
+          <div className="flex justify-center mb-8">
+            <a
+              href="#apps"
+              className="inline-flex items-center gap-2 font-black rounded-full"
+              style={{
+                background: "#E8924A",
+                color: "white",
+                padding: "14px 32px",
+                fontSize: "1rem",
+                textDecoration: "none",
+                boxShadow: "0 4px 20px rgba(232,146,74,0.35)",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              학습 도구 둘러보기
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+                <path d="M8 3v10M3 8l5 5 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
           {/* SEO Keywords */}
           <div className="flex flex-wrap justify-center gap-2">
             {[
@@ -877,6 +899,203 @@ export default function Page() {
           </div>
         </div>
       </header>
+
+      {/* ── Empathy ── */}
+      <section
+        aria-label="학부모 공감"
+        style={{ padding: "56px 24px", borderBottom: "1px solid #EDE0C8" }}
+      >
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <p
+            className="text-center font-black mb-8"
+            style={{ fontSize: "1.15rem", color: "#2D2620", letterSpacing: "-0.02em" }}
+          >
+            이런 고민, 해보신 적 있으신가요?
+          </p>
+          <div className="flex flex-col gap-3 mb-8">
+            {[
+              "다른 아이들은 다 아는데, 우리 아이만 못 따라가는 것 같아요.",
+              "수업 속도가 너무 빨라서 아이가 중간에 포기해버려요.",
+              "틀리면 바로 실망해서 다시 하려 들지 않아요.",
+              "시중 학습지는 진도가 너무 빨라서 우리 아이 수준에 맞는 게 없어요.",
+            ].map((concern) => (
+              <div
+                key={concern}
+                className="flex items-start gap-3 rounded-2xl px-5 py-4"
+                style={{ background: "white", border: "1px solid #EDE0C8" }}
+              >
+                <span
+                  className="shrink-0 rounded-full flex items-center justify-center mt-0.5"
+                  style={{ width: 20, height: 20, background: "#FDE8C8" }}
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
+                    <path d="M5 2v3.5M5 7.5v.5" stroke="#E8924A" strokeWidth="1.8" strokeLinecap="round"/>
+                  </svg>
+                </span>
+                <p className="text-sm leading-relaxed" style={{ color: "#4A4035" }}>
+                  {concern}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Resolution */}
+          <div
+            className="rounded-2xl px-6 py-5 text-center"
+            style={{ background: "linear-gradient(135deg, #FFF8EE 0%, #FFF0D8 100%)", border: "1.5px solid #F0C898" }}
+          >
+            <p
+              className="font-black mb-1"
+              style={{ color: "#2D2620", fontSize: "1.05rem", letterSpacing: "-0.02em" }}
+            >
+              느린아이 시리즈가 함께합니다
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: "#7B6545" }}>
+              아이 속도에 맞게 설계된 학습 도구로,{" "}
+              <strong style={{ color: "#E8924A" }}>작은 성공을 반복</strong>하며
+              스스로 해내는 경험을 쌓아갑니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── A-4: 이런 아이에게 추천해요 ── */}
+      <section
+        aria-label="추천 대상"
+        style={{
+          background: "#F7F4F0",
+          padding: "48px 24px",
+          borderBottom: "1px solid #EDE0C8",
+        }}
+      >
+        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+          <p
+            className="text-center font-black mb-2"
+            style={{ color: "#2D2620", fontSize: "1.15rem", letterSpacing: "-0.02em" }}
+          >
+            이런 아이에게 추천해요
+          </p>
+          <p className="text-center text-sm mb-8" style={{ color: "#7B6545" }}>
+            아이의 상황을 클릭하면 맞는 도구를 찾을 수 있어요
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              {
+                title: "발달 지연 아동",
+                desc: "또래보다 인지·언어·운동 발달이 느린 아이. 반복과 단계적 힌트로 개념을 천천히 쌓을 수 있어요.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
+                    <circle cx="16" cy="16" r="13" fill="#EBF4FC" stroke="#5A9FD8" strokeWidth="1.5"/>
+                    <path d="M10 20 Q16 10 22 20" stroke="#5A9FD8" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                    <circle cx="12" cy="17" r="1.5" fill="#5A9FD8"/>
+                    <circle cx="20" cy="17" r="1.5" fill="#5A9FD8"/>
+                  </svg>
+                ),
+                color: "#5A9FD8",
+                bg: "#EBF4FC",
+                border: "#B8D8F0",
+                tags: ["숫자 익히기", "세기", "모으기·가르기"],
+                href: "#cat-number",
+              },
+              {
+                title: "경계선 지능",
+                desc: "IQ 70–85 구간의 아이. 개념은 이해하지만 속도가 느릴 뿐 — 충분한 시간과 반복이면 해낼 수 있어요.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
+                    <circle cx="16" cy="16" r="13" fill="#E6F6EE" stroke="#4DB87A" strokeWidth="1.5"/>
+                    <path d="M11 18 L15 14 L19 16 L23 12" stroke="#4DB87A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    <circle cx="23" cy="12" r="2" fill="#4DB87A"/>
+                  </svg>
+                ),
+                color: "#4DB87A",
+                bg: "#E6F6EE",
+                border: "#90D8B0",
+                tags: ["덧셈·뺄셈", "비교하기", "패턴 연습"],
+                href: "#cat-operation",
+              },
+              {
+                title: "학습 장애(난산증)",
+                desc: "수 개념 처리에 어려움이 있는 아이. 시각적·청각적 자극을 함께 활용해 다감각으로 접근해요.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
+                    <circle cx="16" cy="16" r="13" fill="#FDF0E3" stroke="#E8924A" strokeWidth="1.5"/>
+                    <rect x="10" y="14" width="5" height="5" rx="1.5" fill="#E8924A" opacity="0.5"/>
+                    <rect x="17" y="14" width="5" height="5" rx="1.5" fill="#E8924A"/>
+                    <rect x="10" y="21" width="5" height="2" rx="1" fill="#E8924A" opacity="0.3"/>
+                    <rect x="17" y="21" width="5" height="2" rx="1" fill="#E8924A" opacity="0.6"/>
+                    <text x="12.5" y="20" fontSize="5" fill="white" fontWeight="bold" textAnchor="middle">2</text>
+                    <text x="19.5" y="20" fontSize="5" fill="white" fontWeight="bold" textAnchor="middle">5</text>
+                  </svg>
+                ),
+                color: "#E8924A",
+                bg: "#FDF0E3",
+                border: "#F0C898",
+                tags: ["숫자 매칭", "숫자 쓰기", "한 자리 덧셈"],
+                href: "#cat-number",
+              },
+              {
+                title: "초등 저학년 학습 부진",
+                desc: "학교 수업을 따라가기 힘든 아이. 시계 보기·구구단·두 자리 계산 등 교과 과정과 연결해 보완해요.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
+                    <circle cx="16" cy="16" r="13" fill="#EDE8F8" stroke="#8B72C8" strokeWidth="1.5"/>
+                    <rect x="10" y="11" width="12" height="10" rx="2" fill="none" stroke="#8B72C8" strokeWidth="1.5"/>
+                    <path d="M10 15 H22" stroke="#8B72C8" strokeWidth="1.5"/>
+                    <path d="M14 11 V9" stroke="#8B72C8" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M18 11 V9" stroke="#8B72C8" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M12.5 18 H15" stroke="#8B72C8" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M17 18 H19.5" stroke="#8B72C8" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+                color: "#8B72C8",
+                bg: "#EDE8F8",
+                border: "#BBA8E8",
+                tags: ["시계 보기", "구구단", "두 자리 덧셈"],
+                href: "#cat-time",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "white",
+                  border: `1.5px solid ${item.border}`,
+                  boxShadow: "0 2px 12px rgba(45,38,32,0.06)",
+                }}
+              >
+                <div className="flex items-start gap-4 p-5">
+                  <div className="shrink-0 mt-0.5">{item.icon}</div>
+                  <div className="min-w-0">
+                    <h3
+                      className="font-black text-base mb-1"
+                      style={{ color: "#2D2620", letterSpacing: "-0.01em" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-xs leading-relaxed mb-3" style={{ color: "#7B6545" }}>
+                      {item.desc}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {item.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-bold rounded-full px-2.5 py-1"
+                          style={{
+                            background: item.bg,
+                            color: item.color,
+                            border: `1px solid ${item.border}`,
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── Value Props ── */}
       <section
@@ -957,7 +1176,7 @@ export default function Page() {
       </nav>
 
       {/* ── Main Content ── */}
-      <main style={{ maxWidth: "1100px", margin: "0 auto", padding: "56px 24px" }}>
+      <main id="apps" style={{ maxWidth: "1100px", margin: "0 auto", padding: "56px 24px" }}>
 
         {/* SEO intro */}
         <div
@@ -989,6 +1208,225 @@ export default function Page() {
             특수교사·언어치료사의 수업 보조 도구로도 활용됩니다.
           </p>
         </div>
+
+        {/* ── 어디서 시작할까요? ── */}
+        <section aria-labelledby="start-heading" className="mb-16">
+          <h2
+            id="start-heading"
+            className="font-black mb-2"
+            style={{ fontSize: "1.2rem", color: "#2D2620", letterSpacing: "-0.02em" }}
+          >
+            어디서 시작할까요?
+          </h2>
+          <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
+            아이의 현재 수준에 맞는 도구를 바로 찾아보세요
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                level: "1단계",
+                label: "숫자와 색깔을 아직 몰라요",
+                desc: "수 감각의 출발점. 숫자 이름·색깔 이름·눈으로 세기부터 시작해요.",
+                color: "#5A9FD8",
+                bg: "#EBF4FC",
+                border: "#B8D8F0",
+                apps: [
+                  { name: "숫자 익히기", slug: "slowmath_number" },
+                  { name: "세기", slug: "slowmath_dice" },
+                  { name: "색깔 익히기", slug: "slowmath_color" },
+                ],
+              },
+              {
+                level: "2단계",
+                label: "숫자는 알지만 더하기가 어려워요",
+                desc: "수와 양을 연결하고, 합치고 나누는 경험을 통해 덧셈 개념을 쌓아요.",
+                color: "#E8924A",
+                bg: "#FDF0E3",
+                border: "#F0C898",
+                apps: [
+                  { name: "숫자 매칭", slug: "slowmath_matching" },
+                  { name: "모으기", slug: "slowmath_combining" },
+                  { name: "가르기", slug: "slowmath_splitting" },
+                  { name: "한 자리 덧셈", slug: "slowmath_easy" },
+                ],
+              },
+              {
+                level: "3단계",
+                label: "비교·규칙 찾기가 어려워요",
+                desc: "크기 비교, 위치 언어, 반복 패턴으로 수학적 사고력의 기초를 닦아요.",
+                color: "#4DB87A",
+                bg: "#E6F6EE",
+                border: "#90D8B0",
+                apps: [
+                  { name: "비교하기", slug: "slowmath_comparing" },
+                  { name: "비교하기 2", slug: "slowmath_comparing2" },
+                  { name: "패턴 연습", slug: "slowmath_pattern" },
+                ],
+              },
+              {
+                level: "4단계",
+                label: "연필 쥐기·쓰기가 힘들어요",
+                desc: "글씨 쓰기 전 꼭 필요한 손 조절 능력과 눈-손 협응을 차근차근 키워요.",
+                color: "#8B72C8",
+                bg: "#EDE8F8",
+                border: "#BBA8E8",
+                apps: [
+                  { name: "선 긋기", slug: "slowmath_linedraw" },
+                  { name: "점선 따라 그리기", slug: "slowmath_dot2dot" },
+                  { name: "숫자 쓰기", slug: "slowmath_numberdraw" },
+                ],
+              },
+            ].map((step) => (
+              <div
+                key={step.level}
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "white",
+                  border: `1.5px solid ${step.border}`,
+                  boxShadow: "0 2px 12px rgba(45,38,32,0.06)",
+                }}
+              >
+                {/* Card header */}
+                <div className="px-5 py-4" style={{ background: step.bg }}>
+                  <span
+                    className="text-xs font-black rounded-full px-2.5 py-1 mb-2 inline-block"
+                    style={{ background: step.color, color: "white" }}
+                  >
+                    {step.level}
+                  </span>
+                  <h3
+                    className="font-black text-base"
+                    style={{ color: "#2D2620", letterSpacing: "-0.01em" }}
+                  >
+                    {step.label}
+                  </h3>
+                </div>
+                {/* Card body */}
+                <div className="px-5 py-4">
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: "#7B6545" }}>
+                    {step.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {step.apps.map((app) => (
+                      <a
+                        key={app.slug}
+                        href={`${BASE}/${app.slug}/`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-bold rounded-full px-3 py-1.5"
+                        style={{
+                          background: step.bg,
+                          color: step.color,
+                          border: `1px solid ${step.border}`,
+                          textDecoration: "none",
+                        }}
+                      >
+                        {app.name}
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
+                          <path d="M2 5h6M5 2l3 3-3 3" stroke={step.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── A-5: 직접 체험해보세요 ── */}
+        <section aria-labelledby="preview-heading" className="mb-16">
+          <h2
+            id="preview-heading"
+            className="font-black mb-2"
+            style={{ fontSize: "1.2rem", color: "#2D2620", letterSpacing: "-0.02em" }}
+          >
+            직접 체험해보세요
+          </h2>
+          <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
+            설치 없이 바로 사용해볼 수 있어요
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                name: "숫자 익히기",
+                slug: "slowmath_number",
+                desc: "0~9 숫자 이름과 모양을 익히는 첫 번째 도구",
+                color: "#5A9FD8",
+                bg: "#EBF4FC",
+                border: "#B8D8F0",
+              },
+              {
+                name: "한 자리 덧셈",
+                slug: "slowmath_easy",
+                desc: "블록으로 합치는 경험으로 덧셈 개념을 쌓아요",
+                color: "#E8924A",
+                bg: "#FDF0E3",
+                border: "#F0C898",
+              },
+              {
+                name: "선 긋기",
+                slug: "slowmath_linedraw",
+                desc: "손 조절 능력과 눈-손 협응을 키우는 첫걸음",
+                color: "#8B72C8",
+                bg: "#EDE8F8",
+                border: "#BBA8E8",
+              },
+            ].map((app) => (
+              <div
+                key={app.slug}
+                className="rounded-2xl overflow-hidden flex flex-col"
+                style={{
+                  background: "white",
+                  border: `1.5px solid ${app.border}`,
+                  boxShadow: "0 2px 12px rgba(45,38,32,0.06)",
+                }}
+              >
+                {/* Label */}
+                <div
+                  className="px-4 py-3 flex items-center justify-between"
+                  style={{ background: app.bg, borderBottom: `1px solid ${app.border}` }}
+                >
+                  <div>
+                    <span
+                      className="text-xs font-black"
+                      style={{ color: app.color }}
+                    >
+                      {app.name}
+                    </span>
+                    <p className="text-xs mt-0.5" style={{ color: "#7B6545" }}>{app.desc}</p>
+                  </div>
+                  <a
+                    href={`${BASE}/${app.slug}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 ml-3 text-xs font-bold rounded-full px-3 py-1.5 flex items-center gap-1"
+                    style={{
+                      background: app.color,
+                      color: "white",
+                      textDecoration: "none",
+                    }}
+                  >
+                    열기
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
+                      <path d="M2 5h5M5 2l3 3-3 3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+                {/* iframe */}
+                <div className="relative w-full" style={{ paddingBottom: "70%", background: "#F7F4F0" }}>
+                  <iframe
+                    src={`${BASE}/${app.slug}/`}
+                    title={`${app.name} 체험`}
+                    className="absolute inset-0 w-full h-full border-0"
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin allow-forms"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Category sections */}
         <div className="flex flex-col gap-16">
