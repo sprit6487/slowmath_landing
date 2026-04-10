@@ -619,7 +619,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
           loading="lazy"
-          style={{ position: "absolute", top: "-90px", left: 0, width: "100%", height: "auto" }}
+          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "auto" }}
         />
       </div>
 
