@@ -651,6 +651,15 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           </svg>
         </div>
       </div>
+      {/* Screenshot */}
+      <div className="relative overflow-hidden" style={{ height: 168, background: "#F7F4F0", borderBottom: `1px solid ${cat.borderColor}` }}>
+        <img
+          src={`/screenshots/${app.slug}.png`}
+          alt={`${app.korName} 메인 화면`}
+          loading="lazy"
+          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "auto" }}
+        />
+      </div>
       {/* Body */}
       <div className="px-5 py-4 flex flex-col gap-3" style={{ flex: 1 }}>
         <p
