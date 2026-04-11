@@ -1225,7 +1225,7 @@ export default function Page() {
           className="text-sm leading-relaxed mb-1"
           style={{ color: "#A08870" }}
         >
-          발달 장애·경계선 지능·학습 장애 아동을 위한 수학 학습 도구
+          발달 장애·경계선 지능·학습 장애 아동을 위한<br />간단하지만 강력한 학습 도구
         </p>
       </footer>
     </div>
