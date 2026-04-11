@@ -52,3 +52,12 @@ body {
 .nav-pill:hover {
   filter: brightness(0.94);
 }
+
+/* Hide scrollbar on nav while keeping scroll functionality */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

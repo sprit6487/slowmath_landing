@@ -597,33 +597,41 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="app-card flex rounded-2xl overflow-hidden"
+      className="app-card flex flex-col sm:flex-row rounded-2xl overflow-hidden sm:min-h-[420px]"
       style={{
         background: "#FFFFFF",
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
         border: `1.5px solid ${cat.borderColor}`,
         textDecoration: "none",
-        minHeight: 420,
       }}
     >
-      {/* Left: Screenshot */}
+      {/* Top/Left: Screenshot */}
       <div
-        className="relative shrink-0 overflow-hidden"
+        className="relative shrink-0 overflow-hidden sm:w-[42%]"
         style={{
-          width: "42%",
           background: "#F7F4F0",
+          borderBottom: `1.5px solid ${cat.borderColor}`,
           borderRight: `1.5px solid ${cat.borderColor}`,
         }}
       >
+        {/* Mobile: fixed-height crop from top */}
         <img
           src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
           loading="lazy"
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "auto" }}
+          className="sm:hidden block w-full"
+          style={{ height: 200, objectFit: "cover", objectPosition: "top center" }}
+        />
+        {/* Desktop: absolute, fills card height from top */}
+        <img
+          src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
+          alt={`${app.korName} 메인 화면`}
+          loading="lazy"
+          className="hidden sm:block absolute top-0 left-0 w-full h-auto"
         />
       </div>
 
-      {/* Right: Content */}
+      {/* Bottom/Right: Content */}
       <div className="flex flex-col" style={{ flex: 1, minWidth: 0 }}>
         {/* Header */}
         <div
@@ -799,9 +807,9 @@ export default function Page() {
 
       {/* ── Hero ── */}
       <header
+        className="px-6 pt-10 pb-10 sm:pt-16 sm:pb-14"
         style={{
           background: "linear-gradient(160deg, #FFFAF3 0%, #FFF0D8 55%, #FFE8C4 100%)",
-          padding: "64px 24px 56px",
           borderBottom: "1px solid #EDE0C8",
         }}
       >
@@ -893,7 +901,8 @@ export default function Page() {
       {/* ── 느린아이란? ── */}
       <section
         aria-label="느린아이 소개"
-        style={{ padding: "48px 24px", borderBottom: "1px solid #EDE0C8", background: "white" }}
+        className="px-6 py-10 sm:py-12"
+        style={{ borderBottom: "1px solid #EDE0C8", background: "white" }}
       >
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <h2
@@ -923,7 +932,8 @@ export default function Page() {
       {/* ── Empathy ── */}
       <section
         aria-label="학부모 공감"
-        style={{ padding: "56px 24px", borderBottom: "1px solid #EDE0C8" }}
+        className="px-6 py-10 sm:py-14"
+        style={{ borderBottom: "1px solid #EDE0C8" }}
       >
         <div style={{ maxWidth: "720px", margin: "0 auto" }}>
           <p
@@ -981,9 +991,9 @@ export default function Page() {
       {/* ── Value Props ── */}
       <section
         aria-label="느린아이 학습 도구의 특징"
+        className="px-6 py-10 sm:py-12"
         style={{
           background: "white",
-          padding: "48px 24px",
           borderBottom: "1px solid #EDE0C8",
         }}
       >
@@ -994,7 +1004,7 @@ export default function Page() {
           >
             느린아이 학습 도구가 다른 이유
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {valueProps.map((v) => (
               <div
                 key={v.title}
@@ -1027,21 +1037,21 @@ export default function Page() {
           background: "rgba(247,244,240,0.9)",
           backdropFilter: "blur(12px)",
           borderBottom: "1px solid #EDE0C8",
-          padding: "12px 24px",
+          padding: "10px 16px",
           position: "sticky",
           top: 0,
           zIndex: 20,
         }}
       >
         <div
-          className="flex flex-wrap gap-2 justify-center"
+          className="flex gap-2 overflow-x-auto sm:flex-wrap sm:justify-center pb-0.5"
           style={{ maxWidth: "960px", margin: "0 auto" }}
         >
           {categories.map((cat) => (
             <a
               key={cat.id}
               href={`#cat-${cat.id}`}
-              className="nav-pill flex items-center gap-1.5 text-xs font-bold rounded-full px-4 py-2"
+              className="nav-pill flex items-center gap-1.5 text-xs font-bold rounded-full px-3 sm:px-4 py-2 whitespace-nowrap shrink-0 sm:shrink"
               style={{
                 background: cat.bgColor,
                 color: cat.color,
@@ -1049,7 +1059,7 @@ export default function Page() {
                 textDecoration: "none",
               }}
             >
-              <cat.Icon color={cat.color} />
+              <span className="hidden sm:inline-flex"><cat.Icon color={cat.color} /></span>
               <span>{cat.label}</span>
             </a>
           ))}
@@ -1057,7 +1067,7 @@ export default function Page() {
       </nav>
 
       {/* ── Main Content ── */}
-      <main id="apps" style={{ maxWidth: "1100px", margin: "0 auto", padding: "56px 24px" }}>
+      <main id="apps" className="px-4 sm:px-6 py-10 sm:py-14" style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
         {/* ── 어디서 시작할까요? ── */}
         <section aria-labelledby="start-heading" className="mb-16">
@@ -1197,11 +1207,10 @@ export default function Page() {
 
       {/* ── Footer ── */}
       <footer
+        className="px-6 py-10 sm:py-12 text-center"
         style={{
           background: "#2D2620",
           color: "#D9C9B0",
-          textAlign: "center",
-          padding: "48px 24px",
         }}
       >
         <p
