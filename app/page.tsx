@@ -849,7 +849,7 @@ export default function Page() {
               letterSpacing: "-0.03em",
             }}
           >
-            느리지만 <span style={{ color: "#5A9FD8" }}>올바른</span> 방향으로,
+            느리지만 <span style={{ color: "#5A9FD8" }}>올바른</span> 방향으로
             <br />
             <span style={{ color: "#E8924A" }}>한 걸음씩</span> 나아갑니다
           </h1>
@@ -868,7 +868,7 @@ export default function Page() {
           </p>
 
           {/* CTA */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <a
               href="#apps"
               className="inline-flex items-center gap-2 font-black rounded-full"
