@@ -887,33 +887,6 @@ export default function Page() {
             </a>
           </div>
 
-          {/* SEO Keywords */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {[
-              "발달 지연 아동 교육",
-              "경계선 지능 아이 학습",
-              "숫자 쓰기 연습",
-              "수 세기 연습",
-              "덧셈 기초 연습",
-              "시계 보기 연습",
-              "구구단 천천히 배우기",
-              "소근육 발달 훈련",
-              "색깔 인지 학습",
-              "느린 아이 수학 기초",
-            ].map((kw) => (
-              <span
-                key={kw}
-                className="text-xs font-medium rounded-full px-3 py-1.5"
-                style={{
-                  background: "rgba(255,255,255,0.7)",
-                  color: "#7B6545",
-                  border: "1px solid #E8D8BC",
-                }}
-              >
-                {kw}
-              </span>
-            ))}
-          </div>
         </div>
       </header>
 
@@ -939,7 +912,7 @@ export default function Page() {
             충분한 생각 시간, 단계적 힌트, 음성 안내를 통해{" "}
             <strong style={{ color: "#4A4035" }}>아이가 스스로 해내는 경험</strong>을 반복하고,
             그 작은 성공이 독립의 자양분이 되도록 돕습니다.
-            특수교사·인지치료사의 수업 보조 도구로도 활용됩니다.
+            학부모·특수교사·인지치료사의 수업 보조 도구로도 활용됩니다.
           </p>
           <p className="text-sm mt-4 font-semibold" style={{ color: "#5A9FD8" }}>
             카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 직접 만들었습니다.
