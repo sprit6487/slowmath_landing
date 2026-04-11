@@ -863,8 +863,8 @@ export default function Page() {
 
           {/* Description */}
           <p
+            className="text-xs sm:text-sm"
             style={{
-              fontSize: "0.875rem",
               color: "#7B6545",
               lineHeight: 1.7,
               marginBottom: "32px",
