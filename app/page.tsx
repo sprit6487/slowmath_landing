@@ -1227,6 +1227,12 @@ export default function Page() {
         >
           발달 장애·경계선 지능·학습 장애 아동을 위한<br />간단하지만 강력한 학습 도구
         </p>
+        <p
+          className="text-xs leading-loose mt-4"
+          style={{ color: "#5A4A38", opacity: 0.5 }}
+        >
+          #발달장애 #경계선지능 #학습장애 #지적장애 #자폐스펙트럼 #ASD #Autism #오티즘 #ADHD #주의력결핍 #과잉행동 #느린학습자 #발달지연 #다운증후군 #특수교육 #특수아동 #조기개입 #홈스쿨링
+        </p>
       </footer>
     </div>
   );
