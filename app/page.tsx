@@ -1174,8 +1174,9 @@ export default function Page() {
                         href={`${BASE}/${app.slug}/`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs font-bold rounded-full px-3 py-1.5"
+                        className="inline-flex items-center gap-1 font-bold rounded-full px-2.5 py-1"
                         style={{
+                          fontSize: "0.7rem",
                           background: step.bg,
                           color: step.color,
                           border: `1px solid ${step.border}`,
@@ -1183,7 +1184,7 @@ export default function Page() {
                         }}
                       >
                         {app.name}
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
+                        <svg width="8" height="8" viewBox="0 0 10 10" fill="none" aria-hidden>
                           <path d="M2 5h6M5 2l3 3-3 3" stroke={step.color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </a>
