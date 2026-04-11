@@ -868,6 +868,7 @@ export default function Page() {
               color: "#7B6545",
               lineHeight: 1.7,
               marginBottom: "32px",
+              wordBreak: "keep-all",
             }}
           >
             발달 장애·경계선 지능·학습 장애 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
