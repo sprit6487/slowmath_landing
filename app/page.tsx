@@ -658,7 +658,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
         border: `1.5px solid ${cat.borderColor}`,
         textDecoration: "none",
-        minHeight: 180,
+        minHeight: 150,
       }}
     >
       {/* Left: Screenshot — always side-by-side */}
@@ -766,23 +766,6 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           <p className="leading-relaxed break-keep" style={{ fontSize: "0.72rem", color: "#7B6545" }}>
             {app.value}
           </p>
-
-          <div className="flex flex-wrap gap-1.5">
-            {app.tags.map((tag) => (
-              <span
-                key={tag}
-                className="font-medium rounded-full px-2 py-0.5"
-                style={{
-                  fontSize: "0.7rem",
-                  background: cat.bgColor,
-                  color: cat.color,
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </a>
