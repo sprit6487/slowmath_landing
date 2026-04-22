@@ -9,7 +9,7 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "느린아이 | 발달 지연 아동을 위한 수학 학습 도구 모음",
+  title: "느린아이 | 한 걸음씩, 아이의 속도로",
   description:
     "발달 지연·경계선 지능·학습 장애 아동이 스스로 해내는 경험을 쌓도록 설계된 수학 학습 도구 21종. 숫자 익히기·덧셈·구구단·시계 보기·비교하기·패턴 인지·소근육 발달 훈련까지. 학부모가 집에서 바로 활용할 수 있습니다.",
   keywords: [
