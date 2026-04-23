@@ -53,6 +53,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["https://starguys.github.io/slowmath_landing/og-image.png"],
   },
+  verification: {
+    other: {
+      "naver-site-verification": "96f9abd3db28c71203b7f8ca7538184fec3fe90e",
+    },
+  },
 };
 
 export default function RootLayout({
