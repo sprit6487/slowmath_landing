@@ -1,3 +1,5 @@
+import LazyVideo from "./LazyVideo";
+
 // ─── SVG Icon Components ───────────────────────────────────────────────────
 
 function IconNumbers({ color }: { color: string }) {
@@ -1327,15 +1329,10 @@ export default function Page() {
               border: "1px solid #EDE0C8",
             }}
           >
-            <video
+            <LazyVideo
               src={`${ASSET_BASE}/video/learning-demo.mp4`}
               poster={`${ASSET_BASE}/video/learning-demo.jpg`}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              aria-label="느린아이 앱으로 학습하는 아이의 실제 모습"
+              ariaLabel="느린아이 앱으로 학습하는 아이의 실제 모습"
               className="absolute inset-0 w-full h-full"
               style={{ objectFit: "cover" }}
             />
