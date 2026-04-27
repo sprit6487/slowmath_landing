@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
-
-const notoSansKR = Noto_Sans_KR({
-  subsets: ["latin"],
-  weight: ["400", "900"],
-  display: "optional",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.slowkids.net"),
@@ -174,7 +167,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={notoSansKR.className}>
+      <body>
         {jsonLdBlocks.map((block, i) => (
           <script
             key={i}
