@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 통합앱(Capacitor) 아이콘 자산 — 별도 프로젝트용, 이 리포에 커밋 안 함
+/preview-app-icon/
+/scripts/render-app-icon-previews.mjs
+/scripts/render-app-icon-final.mjs
+/scripts/render-home-preview.mjs
