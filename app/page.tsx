@@ -899,6 +899,7 @@ function CategorySection({
     <section
       id={`cat-${cat.id}`}
       aria-labelledby={`heading-${cat.id}`}
+      className="lazy-section-tall"
       style={{ scrollMarginTop: 72 }}
     >
       <div className="flex items-start gap-3 mb-6">
@@ -1131,7 +1132,7 @@ export default function Page() {
       {/* ── Empathy ── */}
       <section
         aria-label="학부모 공감"
-        className="px-6 py-12 sm:py-16"
+        className="px-6 py-12 sm:py-16 lazy-section"
         style={{
           borderBottom: "1px solid #EDE0C8",
           background:
@@ -1241,7 +1242,7 @@ export default function Page() {
       {/* ── Real-usage demo video ── */}
       <section
         aria-label="아이 학습 실제 모습"
-        className="px-6 py-12 sm:py-16"
+        className="px-6 py-12 sm:py-16 lazy-section"
         style={{
           borderBottom: "1px solid #EDE0C8",
           background:
@@ -1343,7 +1344,7 @@ export default function Page() {
       {/* ── Value Props ── */}
       <section
         aria-label="느린아이 학습 도구의 특징"
-        className="px-6 py-10 sm:py-12"
+        className="px-6 py-10 sm:py-12 lazy-section"
         style={{
           background: "white",
           borderBottom: "1px solid #EDE0C8",
@@ -1618,7 +1619,7 @@ export default function Page() {
 
       {/* ── Footer ── */}
       <footer
-        className="px-6 py-12 sm:py-14 text-center"
+        className="px-6 py-12 sm:py-14 text-center lazy-section"
         style={{
           background: "#2D2620",
           color: "#D9C9B0",

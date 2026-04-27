@@ -58,6 +58,17 @@ body {
   box-shadow: 0 10px 24px rgba(45, 38, 32, 0.1);
 }
 
+/* 뷰포트 밖 섹션은 브라우저가 layout/paint를 스킵해 초기 LCP·렌더 비용 절감.
+   contain-intrinsic-size로 초기 placeholder 높이를 줘서 스크롤바 점프(CLS) 방지. */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+.lazy-section-tall {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1400px;
+}
+
 .nav-pill {
   transition: background 0.15s ease, color 0.15s ease;
 }
