@@ -1372,7 +1372,7 @@ export default function Page() {
           >
             느린아이 학습 도구가 다른 이유
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-5">
             {valueProps.map((v) => (
               <div
                 key={v.title}
