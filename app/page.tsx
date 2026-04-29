@@ -1387,8 +1387,8 @@ export default function Page() {
                   {v.title}
                 </h3>
                 <p
-                  className="leading-relaxed break-keep lg:text-[0.9rem]"
-                  style={{ fontSize: "0.8rem", color: "#7B6545", lineHeight: 1.6 }}
+                  className="leading-relaxed break-keep lg:text-[0.95rem]"
+                  style={{ fontSize: "0.85rem", color: "#7B6545", lineHeight: 1.65 }}
                 >
                   {v.desc}
                 </p>
