@@ -1365,7 +1365,7 @@ export default function Page() {
           borderBottom: "1px solid #EDE0C8",
         }}
       >
-        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <p
             className="text-center font-black mb-8"
             style={{ color: "#2D2620", fontSize: "1.15rem", letterSpacing: "-0.02em" }}
