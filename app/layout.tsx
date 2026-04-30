@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.slowkids.net"),
   alternates: {
-    canonical: "/",
+    canonical: "https://www.slowkids.net/",
   },
   title: "느린아이 | 한 걸음씩, 아이의 속도로",
   description:
