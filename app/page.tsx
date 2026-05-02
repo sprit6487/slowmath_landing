@@ -310,7 +310,7 @@ function IconFocus() {
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
-const BASE = "https://sprit6487.github.io/slowmath_all";
+const BASE = "";
 const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const appEmoji: Record<string, string> = {

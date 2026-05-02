@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/slowmath_:app/:path*",
+      "destination": "https://slowmath-all.vercel.app/slowmath_:app/:path*"
+    }
+  ]
+}

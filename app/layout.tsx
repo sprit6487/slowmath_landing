@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 const SITE_URL = "https://slowkids.net";
-const APP_BASE = "https://sprit6487.github.io/slowmath_all";
+const APP_BASE = "https://slowkids.net";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
