@@ -235,6 +235,17 @@ function IconClock({ color }: { color: string }) {
   );
 }
 
+function IconCoins({ color }: { color: string }) {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <ellipse cx="11" cy="11" rx="7" ry="7" stroke={color} strokeWidth="1.8" fill={color} fillOpacity=".08" />
+      <text x="11" y="14" textAnchor="middle" fontSize="7" fontWeight="700" fill={color}>₩</text>
+      <ellipse cx="18" cy="18" rx="7" ry="7" stroke={color} strokeWidth="1.8" fill={color} fillOpacity=".18" />
+      <text x="18" y="21" textAnchor="middle" fontSize="7" fontWeight="700" fill={color}>₩</text>
+    </svg>
+  );
+}
+
 function IconMultiply({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
@@ -333,6 +344,7 @@ const appEmoji: Record<string, string> = {
   slowmath_dice: "🎲",
   slowmath_counting: "🧮",
   slowmath_matching: "🎯",
+  slowmath_money: "🪙",
   slowmath_comparing: "⚖️",
   slowmath_comparing2: "⚖️",
   slowmath_compare: "📏",
@@ -574,6 +586,19 @@ const apps: App[] = [
     tags: ["수와 양", "수 개념", "1~20", "순서·무작위"],
     childEffect: "숫자와 개수를 연결해요",
     duration: "5분",
+  },
+  {
+    slug: "slowmath_money",
+    name: "Money",
+    korName: "동전과 지폐",
+    Icon: IconCoins,
+    category: "number",
+    shortDesc: "우리나라 동전과 지폐의 모양·이름을 익혀요",
+    value:
+      "10·50·100·500원 동전과 1,000·5,000·10,000·50,000원 지폐를 그림과 이름으로 짝지으며 자연스럽게 익혀요. 충동방지(보기 확인) 모드로 천천히 생각하는 습관을 길러줍니다.",
+    tags: ["동전", "지폐", "그림 ↔ 이름", "생활 수학"],
+    childEffect: "돈의 종류와 이름을 알아요",
+    duration: "3분",
   },
 
   // ── 수 관계 ──
