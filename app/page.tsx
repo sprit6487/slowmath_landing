@@ -246,6 +246,17 @@ function IconCoins({ color }: { color: string }) {
   );
 }
 
+function IconBorrow({ color }: { color: string }) {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <text x="20" y="12" textAnchor="end" fontSize="8" fontWeight="800" fill={color}>13</text>
+      <text x="6" y="22" fontSize="8" fontWeight="800" fill={color}>−</text>
+      <text x="20" y="22" textAnchor="end" fontSize="8" fontWeight="800" fill={color}>7</text>
+      <line x1="5" y1="24" x2="22" y2="24" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function IconMultiply({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
@@ -361,6 +372,7 @@ const appEmoji: Record<string, string> = {
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
+  slowmath_borrow: "⬇️",
   slowmath_timestables: "✖️",
 };
 
@@ -815,6 +827,19 @@ const apps: App[] = [
     tags: ["-3 뺄셈", "수 배열판", "무작위"],
     childEffect: "거꾸로 세 칸씩 세요",
     duration: "5분",
+  },
+  {
+    slug: "slowmath_borrow",
+    name: "Borrow",
+    korName: "받아내림 연습",
+    Icon: IconBorrow,
+    category: "sub",
+    shortDesc: "받아내림이 필요한 뺄셈을 단계별로 차근차근 풀어요",
+    value:
+      "두 자리에서 한 자리·두 자리를 뺄 때 받아내림이 어떻게 일어나는지 식의 분해와 묶음 표시로 천천히 보여줘요. 첫 문제는 빈칸 한 칸으로 시작해 점진적으로 빈칸이 늘어나며 풀이 흐름을 스스로 익혀요.",
+    tags: ["받아내림", "세로 뺄셈", "두 자리", "단계별 풀이"],
+    childEffect: "받아내림의 원리를 보고 풀어요",
+    duration: "7분",
   },
 
   // ── 곱셈 ──
