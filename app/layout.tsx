@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://starguys.github.io/slowmath_landing/og-image.png",
+        url: "https://slowkids.net/og-image.png",
         width: 1200,
         height: 630,
         alt: "느린아이 시리즈 — 느리지만 올바른 방향으로, 한 걸음씩 나아갑니다",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "느린아이 시리즈 — 한 걸음씩, 아이의 속도로",
     description:
       "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습 도구. App Store에서 만나보세요.",
-    images: ["https://starguys.github.io/slowmath_landing/og-image.png"],
+    images: ["https://slowkids.net/og-image.png"],
   },
   verification: {
     other: {
