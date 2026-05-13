@@ -13,7 +13,7 @@ export default function TermsPage() {
     <>
       <h1>느린아이 서비스 이용약관</h1>
       <p className="legal-meta"><strong>시행일</strong>: 2026-04-28</p>
-      <p className="legal-meta"><strong>최종 개정일</strong>: 2026-04-28</p>
+      <p className="legal-meta"><strong>최종 개정일</strong>: 2026-05-14</p>
       <hr className="legal-hr" />
 
       <h2>제1조 (목적)</h2>
@@ -112,40 +112,72 @@ export default function TermsPage() {
 
       <h2>제8조 (청약 철회 및 환불)</h2>
 
-      <h3>8.1 청약 철회의 원칙</h3>
-      <p>「전자상거래 등에서의 소비자보호에 관한 법률」 및 「콘텐츠산업 진흥법」에 따라 회원은 다음과 같이 청약 철회 및 환불을 요청할 수 있습니다.</p>
+      <h3>8.1 일반 원칙</h3>
       <ol>
-        <li><strong>결제 후 7일 이내, 콘텐츠 미사용 시</strong>: 전액 환불</li>
+        <li>본 서비스의 모든 유료 이용권은 Apple App Store 또는 Google Play의 인앱결제 시스템을 통해 결제됩니다.</li>
+        <li>회원은 「전자상거래 등에서의 소비자보호에 관한 법률」, 「콘텐츠산업 진흥법」 등 관계 법령에 따라 청약 철회 및 환불을 요청할 권리를 가지며, 본 약관은 위 법령상 회원의 권리를 제한하지 않습니다.</li>
         <li>
-          <strong>결제 후 7일 이내, 콘텐츠 일부 사용 시</strong>: 같은 법 제17조 제2항 제5호에 따라 가분(可分)되지 않는 디지털 콘텐츠로서 사용·이용으로 가치가 현저히 감소한 경우 환불이 제한될 수 있습니다. 다만 회사는 사용자 보호를 위해 다음 기준을 적용합니다.
+          환불 처리 권한은 결제가 이루어진 스토어에 따라 다음과 같이 구분됩니다.
           <ul>
-            <li>결제 후 7일 이내 + 누적 이용 기록이 1일 미만인 경우 → 전액 환불</li>
-            <li>결제 후 7일 이내 + 누적 이용 기록이 1일 이상인 경우 → 환불 제한</li>
+            <li><strong>Apple App Store (iOS)</strong>: 환불 신청의 접수·심사·승인·집행은 Apple이 자체 정책에 따라 단독으로 처리하며, <strong>회사는 직접 환불을 집행할 권한이 없습니다</strong>. 회원의 요청 시 회사는 신청 절차 안내 및 합리적 범위의 지원을 제공합니다.</li>
+            <li><strong>Google Play (Android)</strong>: 회원은 Google Play를 통해 직접 환불을 신청하거나 회사를 통해 환불을 요청할 수 있으며, <strong>회사는 본 약관 제8.3조의 기준 및 관계 법령에 따라 Google Play Console을 통해 직접 환불을 처리할 수 있습니다</strong>.</li>
           </ul>
         </li>
-        <li><strong>결제 후 7일 이후</strong>: 회사 귀책 사유(서비스 장애로 7일 이상 이용 불가 등)가 있는 경우를 제외하고 환불 제한</li>
       </ol>
 
-      <h3>8.2 환불 절차</h3>
+      <h3>8.2 환불 신청 경로</h3>
+
+      <h4>(1) Apple App Store (iOS) — Apple이 직접 처리</h4>
       <ol>
         <li>
-          <strong>인앱결제 환불 신청 경로</strong>
+          <strong>회원의 신청 방법</strong> (둘 중 편한 경로를 선택)
           <ul>
-            <li><strong>Android (Google Play)</strong>: 본 약관에 따른 환불 요건을 충족하는 경우, 회원은 Google Play의 환불 정책에 따라 직접 또는 회사를 통해 환불 신청할 수 있습니다.</li>
-            <li><strong>iOS (Apple App Store)</strong>: Apple의 환불 정책에 따라 reportaproblem.apple.com 또는 회사를 통해 환불 신청할 수 있습니다.</li>
+            <li><strong>iOS 디바이스 (권장)</strong>: 설정 → 본인 이름(Apple ID) → 미디어 및 구입 항목 → 구매 내역 → 해당 구매 건 선택 → 환불 신청</li>
+            <li><strong>웹</strong>: <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">https://reportaproblem.apple.com</a> 접속 → Apple ID 로그인 → 해당 구매 건 선택 → 환불 사유 입력 후 제출 (Apple ID 로그인 단계에서 오류 발생 시 iOS 디바이스 경로 이용 권장)</li>
           </ul>
         </li>
-        <li><strong>회사를 통한 신청</strong>: 회원은 아래 고객센터 이메일로 결제 영수증, 회원 식별 정보(이메일 또는 회원 ID)를 첨부하여 환불을 요청할 수 있습니다. 회사는 7영업일 이내 검토 후 결과를 회신합니다.</li>
-        <li><strong>환불 처리 기한</strong>: 환불 승인 후 실제 결제 수단으로의 환급은 각 스토어 및 카드사·통신사의 처리 기간(통상 3~14영업일)에 따릅니다.</li>
+        <li>심사·승인·환급은 모두 Apple이 자체 정책에 따라 결정·처리하며, 회사는 환불의 승인·거부에 관여할 수 없습니다.</li>
+        <li>회사에 환불 관련 문의를 보내신 경우, 회사는 위 신청 절차 안내 및 결제 영수증 확인 등 합리적 범위의 지원만 제공할 수 있습니다.</li>
       </ol>
 
-      <h3>8.3 환불이 제한되는 경우</h3>
-      <p>다음 각 호의 경우에는 환불이 제한될 수 있습니다.</p>
+      <h4>(2) Google Play (Android) — 회사 또는 Google 처리</h4>
+      <ol>
+        <li>
+          <strong>경로 A — 회원이 Google Play를 통해 직접 신청</strong>
+          <ul>
+            <li>Google Play 앱 → 메뉴 → 결제 및 정기 결제 → 예산 및 주문 내역 → 해당 항목 → "환불 요청"</li>
+            <li>또는 웹: <a href="https://play.google.com" target="_blank" rel="noreferrer">https://play.google.com</a> 의 주문 내역에서 환불 신청</li>
+            <li>구매 후 48시간 이내에는 Google Play 자체 환불이 적용되며, 그 이후에는 Google이 회사에 검토를 요청합니다.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>경로 B — 회원이 회사를 통해 신청</strong>
+          <ul>
+            <li>회원은 결제 영수증 및 회원 식별 정보(이메일 또는 회원 ID)를 첨부하여 <a href="mailto:contact@everydaysummer.net">contact@everydaysummer.net</a> 으로 환불을 요청할 수 있습니다.</li>
+            <li>회사는 접수일로부터 7영업일 이내에 본 약관 제8.3조 및 관계 법령에 따라 검토 후 답변하며, 환불 승인 시 Google Play Console을 통해 회원의 결제 수단으로 환급을 직접 처리합니다.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h4>(3) 환불 처리 기한</h4>
+      <p>환불 승인 후 실제 결제 수단으로의 환급은 각 스토어 및 결제 수단(카드사·통신사 등)의 처리 일정에 따라 통상 3~14영업일이 소요됩니다.</p>
+
+      <h3>8.3 회사의 환불 검토 기준</h3>
+      <p>회사가 환불 신청을 직접 검토·처리하는 경우(Google Play의 회사 처리분), 다음 기준에 따라 검토합니다. Apple App Store를 통한 환불 신청은 Apple의 자체 정책에 따르므로 아래 기준이 적용되지 않을 수 있습니다.</p>
+
+      <h4>(1) 환불이 가능한 경우</h4>
+      <ol>
+        <li>결제 후 7일 이내, 콘텐츠 미사용 시: 전액 환불</li>
+        <li>결제 후 7일 이내, 누적 이용 기록이 1일 미만인 경우: 전액 환불</li>
+        <li>회사의 귀책 사유(서비스 장애로 7일 이상 이용 불가 등)가 있는 경우: 사용 기간을 제외한 잔여 기간 비례 환불 또는 전액 환불</li>
+      </ol>
+
+      <h4>(2) 환불이 제한될 수 있는 경우</h4>
       <ol>
         <li>회원의 약관 위반(부정 사용·계정 공유 등)으로 이용권이 회수된 경우</li>
-        <li>회원이 청약 철회 가능 기간(결제일로부터 7일)을 경과한 경우 (단, 회사 귀책 사유 제외)</li>
-        <li>무상 제공된 이용권(무료 이용권·이벤트 쿠폰)을 사용한 경우</li>
-        <li>사용자 본인의 단순 변심으로 콘텐츠를 1일 이상 이용한 경우 (제8.1조 제2항 적용)</li>
+        <li>결제 후 7일 이내라도 누적 이용 기록이 1일 이상인 경우 (단순 변심에 한함)</li>
+        <li>결제 후 7일을 경과한 경우 (회사 귀책 사유 제외)</li>
+        <li>무상 제공된 이용권(무료 이용권·이벤트 쿠폰)에 대해 환불을 요청한 경우</li>
       </ol>
 
       <h3>8.4 미성년자 결제</h3>
