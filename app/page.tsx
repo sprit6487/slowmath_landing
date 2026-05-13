@@ -1098,6 +1098,48 @@ export default function Page() {
   return (
     <div style={{ background: "#F7F4F0", minHeight: "100vh" }}>
 
+      {/* Language toggle (floating top-right) */}
+      <div
+        style={{
+          position: "absolute",
+          top: 16,
+          right: 16,
+          zIndex: 50,
+          display: "inline-flex",
+          overflow: "hidden",
+          borderRadius: 9999,
+          border: "1px solid rgba(45,38,32,0.15)",
+          background: "rgba(255,255,255,0.85)",
+          backdropFilter: "blur(4px)",
+          fontSize: 11,
+          fontWeight: 800,
+        }}
+      >
+        <a
+          href="/"
+          aria-label="한국어"
+          style={{
+            padding: "6px 12px",
+            color: "#fff",
+            background: "#2D2620",
+            textDecoration: "none",
+          }}
+        >
+          KR
+        </a>
+        <a
+          href="/en/"
+          aria-label="English"
+          style={{
+            padding: "6px 12px",
+            color: "#7B6545",
+            textDecoration: "none",
+          }}
+        >
+          EN
+        </a>
+      </div>
+
       {/* ── Hero ── */}
       <header
         className="px-4 pt-10 pb-10 sm:px-6 sm:pt-16 sm:pb-14"

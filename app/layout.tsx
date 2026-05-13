@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://slowkids.net"),
   alternates: {
     canonical: "https://slowkids.net/",
+    languages: {
+      ko: "https://slowkids.net/",
+      en: "https://slowkids.net/en/",
+      "x-default": "https://slowkids.net/",
+    },
   },
   title: "느린아이 | 한 걸음씩, 아이의 속도로 배우는 수학",
   description:
@@ -175,6 +180,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;if(!p){var lang=(navigator.language||'').toLowerCase();var preferKo=lang.indexOf('ko')===0;if(!preferKo&&!onEn){location.replace('/en'+(path==='/'?'/':path));return;}}else if(p==='ko'&&onEn){location.replace(path.replace(/^\\/en\\/?/,'/'));return;}else if(p==='en'&&!onEn){location.replace('/en'+(path==='/'?'/':path));return;}}catch(e){}})();`,
+          }}
+        />
         {jsonLdBlocks.map((block, i) => (
           <script
             key={i}
