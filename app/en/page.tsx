@@ -41,43 +41,78 @@ const STAGES = [
     label: "Foundations",
     color: "#8B72C8",
     bg: "#EDE8F8",
-    modules: ["🌈 Color", "✏️ Lines", "··· Dot to dot", "🪞 Pattern match", "🧩 Pattern recognition"],
+    modules: [
+      { emoji: "🌈", name: "Color", slug: "color" },
+      { emoji: "✏️", name: "Lines", slug: "linedraw" },
+      { emoji: "···", name: "Dot to dot", slug: "dot2dot" },
+      { emoji: "🪞", name: "Pattern match", slug: "colorcopy" },
+      { emoji: "🧩", name: "Pattern recognition", slug: "pattern" },
+    ],
   },
   {
     label: "Number Sense",
     color: "#5A9FD8",
     bg: "#EBF4FC",
-    modules: ["🔢 Numbers", "5️⃣ Writing", "🎲 Counting", "🎯 Matching", "🪙 Money"],
+    modules: [
+      { emoji: "🔢", name: "Numbers", slug: "number" },
+      { emoji: "5️⃣", name: "Writing", slug: "numberdraw" },
+      { emoji: "🎲", name: "Counting", slug: "dice" },
+      { emoji: "🎯", name: "Matching", slug: "matching" },
+      { emoji: "🪙", name: "Money", slug: "money" },
+    ],
   },
   {
     label: "Number Relations",
     color: "#5BAA82",
     bg: "#E8F4ED",
-    modules: ["⚖️ Compare", "⚖️ Compare 2", "📏 Size", "🕐 Time"],
+    modules: [
+      { emoji: "⚖️", name: "Compare", slug: "comparing" },
+      { emoji: "⚖️", name: "Compare 2", slug: "comparing2" },
+      { emoji: "📏", name: "Size", slug: "compare" },
+      { emoji: "🕐", name: "Time", slug: "clock" },
+    ],
   },
   {
     label: "Pre-Addition",
     color: "#E0995A",
     bg: "#FCF0DC",
-    modules: ["🫱 Combine", "✂️ Split", "🔟 Pairs to 10"],
+    modules: [
+      { emoji: "🫱", name: "Combine", slug: "combining" },
+      { emoji: "✂️", name: "Split", slug: "splitting" },
+      { emoji: "🔟", name: "Pairs to 10", slug: "complement" },
+    ],
   },
   {
     label: "Addition",
     color: "#E8924A",
     bg: "#FDEAD6",
-    modules: ["1️⃣ +1", "2️⃣ +2", "3️⃣ +3", "➕ 1-digit", "➕ Practice", "🆙 Carrying"],
+    modules: [
+      { emoji: "1️⃣", name: "+1", slug: "plusone" },
+      { emoji: "2️⃣", name: "+2", slug: "plustwo" },
+      { emoji: "3️⃣", name: "+3", slug: "plusthree" },
+      { emoji: "➕", name: "1-digit", slug: "easy" },
+      { emoji: "➕", name: "Practice", slug: "circle" },
+      { emoji: "🆙", name: "Carrying", slug: "carry" },
+    ],
   },
   {
     label: "Subtraction",
     color: "#D67B72",
     bg: "#FAE6E2",
-    modules: ["1️⃣ −1", "2️⃣ −2", "3️⃣ −3", "⬇️ Borrowing"],
+    modules: [
+      { emoji: "1️⃣", name: "−1", slug: "minusone" },
+      { emoji: "2️⃣", name: "−2", slug: "minustwo" },
+      { emoji: "3️⃣", name: "−3", slug: "minusthree" },
+      { emoji: "⬇️", name: "Borrowing", slug: "borrow" },
+    ],
   },
   {
     label: "Multiplication",
     color: "#7C8FB8",
     bg: "#E8ECF5",
-    modules: ["✖️ Times tables"],
+    modules: [
+      { emoji: "✖️", name: "Times tables", slug: "timestables" },
+    ],
   },
 ];
 
@@ -373,18 +408,21 @@ export default function HomeEn() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {s.modules.map((m) => (
-                    <span
-                      key={m}
-                      className="font-bold rounded-full px-2.5 py-1"
+                    <a
+                      key={m.slug}
+                      href={`/slowmath_${m.slug}/`}
+                      className="inline-flex items-center gap-1 font-bold rounded-full px-2.5 py-1"
                       style={{
                         fontSize: "0.7rem",
                         background: "rgba(255,255,255,0.7)",
                         color: s.color,
                         border: `1px solid ${s.color}44`,
+                        textDecoration: "none",
                       }}
                     >
-                      {m}
-                    </span>
+                      <span aria-hidden>{m.emoji}</span>
+                      <span>{m.name}</span>
+                    </a>
                   ))}
                 </div>
               </div>
