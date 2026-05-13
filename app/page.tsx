@@ -1171,7 +1171,7 @@ export default function Page() {
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center justify-center">
               <a
-                href="https://apps.apple.com/app/id6763979294"
+                href="https://apps.apple.com/kr/app/id6763979294"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="App Store에서 느린아이 다운로드"
