@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "느린아이 시리즈 — 한 걸음씩, 아이의 속도로",
     description:
-      "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습 도구. 무료로 바로 사용해보세요.",
+      "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습 도구. App Store에서 만나보세요.",
     images: ["https://starguys.github.io/slowmath_landing/og-image.png"],
   },
   verification: {
@@ -61,6 +61,9 @@ export const metadata: Metadata = {
       ],
       "msvalidate.01": "D10CD3141F96886AF21FEC7813782631",
     },
+  },
+  itunes: {
+    appId: "6763979294",
   },
 };
 

@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["3HHL8399ZW.com.everydaysummers.slowkids"],
+        "components": [
+          { "/": "/slowmath_*/", "comment": "연습 경로 — 앱이 해당 화면으로 진입" },
+          { "/": "/", "comment": "루트 — 앱 홈으로 진입" }
+        ]
+      }
+    ]
+  }
+}
