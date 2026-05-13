@@ -3,6 +3,10 @@
     {
       "source": "/slowmath_:app/:path*",
       "destination": "https://slowmath-all.vercel.app/slowmath_:app/:path*"
+    },
+    {
+      "source": "/shell/:path*",
+      "destination": "https://slowmath-all.vercel.app/shell/:path*"
     }
   ],
   "headers": [
