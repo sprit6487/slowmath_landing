@@ -1900,7 +1900,7 @@ export default function Page() {
           className="leading-loose mt-6"
           style={{ fontSize: "0.68rem", color: "#A89070", opacity: 0.55, letterSpacing: "0.02em" }}
         >
-          #느린학습자 #발달장애 #경계선지능 #특수교육 #홈스쿨링 #자폐스펙트럼
+          #느린학습자 #발달장애 #경계선지능 #특수교육 #ADHD #자폐스펙트럼
         </p>
       </footer>
     </div>
