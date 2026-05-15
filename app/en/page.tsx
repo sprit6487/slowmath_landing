@@ -7,7 +7,7 @@ const SITE_URL_EN = `${SITE_URL}/en/`;
 export const metadata: Metadata = {
   title: "SlowKids — Math at every child's pace",
   description:
-    "SlowKids is a 29-module learning series for children who pick up math more slowly. From color recognition to multiplication tables, paced so a child can stay at their own speed. iOS app available now.",
+    "SlowKids is a learning series for children who pick up math more slowly. From color recognition to multiplication tables, paced so a child can stay at their own speed. iOS app available now.",
   alternates: {
     canonical: SITE_URL_EN,
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SlowKids — Math at every child's pace",
     description:
-      "29 small math practices for children who learn slowly — from earliest cognition through multiplication. iOS app available now.",
+      "Small math practices for children who learn slowly — from earliest cognition through multiplication. iOS app available now.",
     locale: "en_US",
     alternateLocale: ["ko_KR"],
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SlowKids — Math at every child's pace",
     description:
-      "29 small math practices for children who learn slowly. Available on the App Store.",
+      "Small math practices for children who learn slowly. Available on the App Store.",
   },
   itunes: {
     appId: "6763979294",
@@ -58,7 +58,6 @@ const STAGES = [
       { emoji: "5️⃣", name: "Writing", slug: "numberdraw" },
       { emoji: "🎲", name: "Counting", slug: "dice" },
       { emoji: "🎯", name: "Matching", slug: "matching" },
-      { emoji: "🪙", name: "Money", slug: "money" },
     ],
   },
   {
@@ -231,7 +230,7 @@ export default function HomeEn() {
               wordBreak: "keep-all",
             }}
           >
-            <strong style={{ color: "#4A4035" }}>29 small math practices</strong> for children who pick up concepts more slowly than peers — designed to be repeated patiently, from earliest cognition through multiplication tables.
+            <strong style={{ color: "#4A4035" }}>Small math practices</strong> for children who pick up concepts more slowly than peers — designed to be repeated patiently, from earliest cognition through multiplication tables.
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -391,7 +390,7 @@ export default function HomeEn() {
             The series at a glance
           </p>
           <h2 className="font-black mb-2" style={{ fontSize: "1.5rem", color: "#2D2620", letterSpacing: "-0.02em" }}>
-            7 stages, 29 modules.
+            7 stages, 27 modules.
           </h2>
           <p className="text-sm mb-8" style={{ color: "#7B6545" }}>
             Each stage layers on the previous one. A child can stay on the same module for weeks if they need to.
