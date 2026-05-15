@@ -115,18 +115,55 @@ const STAGES = [
   },
 ];
 
+const EMPATHY_QUOTES = [
+  "Worksheets last two pages before the tears start.",
+  "We've been at numbers 1 through 10 for months.",
+  "One mistake and they refuse to try again.",
+  "Materials for older kids feel too fast. Ones for younger kids feel too babyish.",
+];
+
 const VALUES = [
   {
-    title: "Pace, not pressure",
-    body: "Children move forward at their own speed. The same concept gets repeated from many angles, until it feels familiar — not memorized.",
+    title: "Staged difficulty",
+    body: "Starts where the child is right now and builds up through small wins — never jumping two steps ahead, never asking for the leap a child can't yet make.",
   },
   {
-    title: "Quiet, not flashy",
-    body: "No stars, no levels, no character mascots. A calm screen and a clearly-staged step, so the child can hear themselves think.",
+    title: "Repetition by design",
+    body: "The same idea is practiced from multiple angles. Familiarity comes from being met again, not from being memorized.",
   },
   {
-    title: "Made beside the user",
-    body: "Built by a father of an autistic child, alongside caregivers, special-education teachers, and cognitive therapists.",
+    title: "Enough thinking time",
+    body: "An adjustable wait time before answering reduces impulsive choices and lets the child stay in the moment of figuring it out.",
+  },
+  {
+    title: "Voice guidance",
+    body: "Prompts and feedback are read aloud, so children who can't yet read are not blocked from working on their own.",
+  },
+  {
+    title: "Quiet by design",
+    body: "No flashing screens, no jarring sound effects, no fast-moving characters. Designed for children who get overwhelmed by stimulation.",
+  },
+  {
+    title: "One screen, one task",
+    body: "A single activity at a time. Attention settles when distractions don't compete for it.",
+  },
+];
+
+const AUDIENCES = [
+  {
+    tag: "Parents",
+    title: "Sitting beside the child",
+    body: "Without flashy rewards, at the child's pace. Quick to see what was attempted today, easy to come back tomorrow — and easy to step away when it's enough.",
+  },
+  {
+    tag: "Special education teachers",
+    title: "Different speeds in one classroom",
+    body: "Tightly-staged activities you can pull into a lesson. Students at different points can work without falling behind or waiting on others.",
+  },
+  {
+    tag: "Cognitive therapists",
+    title: "Layers across sessions",
+    body: "Fine-grained stages across cognition, number sense, and arithmetic. Catch where a child stalls and revisit the same idea from a different angle next time.",
   },
 ];
 
@@ -335,16 +372,70 @@ export default function HomeEn() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Empathy */}
       <section
         className="px-6 py-14 sm:py-20"
         style={{
           borderBottom: "1px solid #EDE0C8",
           background:
-            "radial-gradient(900px 420px at 12% 0%, rgba(232,146,74,0.08), transparent 60%), linear-gradient(180deg, #FFFAF2 0%, #FFF6EA 100%)",
+            "radial-gradient(900px 420px at 12% 0%, rgba(232,146,74,0.08), transparent 60%), radial-gradient(700px 360px at 95% 100%, rgba(90,159,216,0.06), transparent 60%), linear-gradient(180deg, #FFFAF2 0%, #FFF6EA 100%)",
         }}
       >
-        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+          <p
+            className="text-center font-semibold mb-3"
+            style={{ fontSize: "0.72rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#C77A00" }}
+          >
+            Before we begin
+          </p>
+          <h2
+            className="text-center font-black mb-3 break-keep"
+            style={{ fontSize: "clamp(1.3rem, 3.6vw, 1.75rem)", color: "#2D2620", letterSpacing: "-0.02em", lineHeight: 1.3 }}
+          >
+            Have you ever said any of these{" "}
+            <span style={{ color: "#E8924A" }}>under your breath?</span>
+          </h2>
+          <p className="text-center leading-relaxed mb-10" style={{ fontSize: "0.9rem", color: "#7B6545" }}>
+            We've heard them many times. They keep stinging anyway.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {EMPATHY_QUOTES.map((quote) => (
+              <div
+                key={quote}
+                className="relative rounded-2xl px-6 py-5"
+                style={{
+                  background: "rgba(255,255,255,0.85)",
+                  border: "1px solid #EDE0C8",
+                  backdropFilter: "blur(4px)",
+                  boxShadow: "0 1px 0 rgba(45,38,32,0.02)",
+                }}
+              >
+                <span
+                  aria-hidden
+                  className="absolute font-black"
+                  style={{
+                    top: "-14px",
+                    left: "18px",
+                    fontSize: "3.2rem",
+                    lineHeight: 1,
+                    color: "rgba(232,146,74,0.7)",
+                    fontFamily: "Georgia, serif",
+                  }}
+                >
+                  &ldquo;
+                </span>
+                <p className="leading-loose" style={{ fontSize: "0.95rem", color: "#2D2620" }}>
+                  {quote}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="px-6 py-14 sm:py-20" style={{ borderBottom: "1px solid #EDE0C8", background: "white" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <p
             className="text-center font-semibold mb-3"
             style={{ fontSize: "0.72rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#C77A00" }}
@@ -352,18 +443,21 @@ export default function HomeEn() {
             What makes it different
           </p>
           <h2
-            className="text-center font-black mb-12 break-keep"
+            className="text-center font-black mb-3 break-keep"
             style={{ fontSize: "clamp(1.3rem, 3.6vw, 1.75rem)", color: "#2D2620", letterSpacing: "-0.02em" }}
           >
-            Three ideas we hold tight to.
+            Six decisions, held tight.
           </h2>
-          <div className="grid sm:grid-cols-3 gap-5">
+          <p className="text-center mb-12" style={{ fontSize: "0.9rem", color: "#7B6545" }}>
+            Each one came from a real moment of stuck-ness.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {VALUES.map((v) => (
               <div
                 key={v.title}
                 className="rounded-2xl px-6 py-6"
                 style={{
-                  background: "rgba(255,255,255,0.85)",
+                  background: "#FFFCF6",
                   border: "1px solid #EDE0C8",
                   boxShadow: "0 1px 0 rgba(45,38,32,0.02)",
                 }}
@@ -373,6 +467,65 @@ export default function HomeEn() {
                 </h3>
                 <p className="text-sm leading-loose" style={{ color: "#7B6545" }}>
                   {v.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who it's for */}
+      <section
+        className="px-6 py-14 sm:py-20"
+        style={{
+          borderBottom: "1px solid #EDE0C8",
+          background:
+            "radial-gradient(800px 400px at 90% 0%, rgba(90,159,216,0.08), transparent 60%), linear-gradient(180deg, #FFFAF3 0%, #FFF6EA 100%)",
+        }}
+      >
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <p
+            className="text-center font-semibold mb-3"
+            style={{ fontSize: "0.72rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#C77A00" }}
+          >
+            Who it's for
+          </p>
+          <h2
+            className="text-center font-black mb-12 break-keep"
+            style={{ fontSize: "clamp(1.3rem, 3.6vw, 1.75rem)", color: "#2D2620", letterSpacing: "-0.02em" }}
+          >
+            For the people walking alongside.
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {AUDIENCES.map((a) => (
+              <div
+                key={a.tag}
+                className="rounded-2xl px-6 py-6"
+                style={{
+                  background: "rgba(255,255,255,0.85)",
+                  border: "1px solid #EDE0C8",
+                  backdropFilter: "blur(4px)",
+                  boxShadow: "0 1px 0 rgba(45,38,32,0.02)",
+                }}
+              >
+                <span
+                  className="inline-block font-semibold mb-3 rounded-full"
+                  style={{
+                    fontSize: "0.7rem",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "#C77A00",
+                    background: "rgba(232,146,74,0.12)",
+                    padding: "4px 10px",
+                  }}
+                >
+                  {a.tag}
+                </span>
+                <h3 className="font-bold text-base mb-2" style={{ color: "#2D2620", letterSpacing: "-0.01em" }}>
+                  {a.title}
+                </h3>
+                <p className="text-sm leading-loose" style={{ color: "#7B6545" }}>
+                  {a.body}
                 </p>
               </div>
             ))}
