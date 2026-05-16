@@ -116,9 +116,11 @@ const appCatalog = [
   { slug: "dice", name: "세기", desc: "손가락·주사위·카드 무늬를 세며 수 감각을 키워요." },
   { slug: "counting", name: "우리말 세기", desc: "한 명·두 마리·세 대… 우리말로 세는 말과 숫자를 짝지어요." },
   { slug: "matching", name: "숫자 매칭", desc: "숫자와 동그라미의 개수를 연결하며 수와 양을 연결해요." },
+  { slug: "money", name: "동전과 지폐", desc: "동전과 지폐의 단위·합산을 익히며 생활 속 수 감각을 키워요." },
   // 수 관계
   { slug: "comparing", name: "비교하기 기초", desc: "크기·길이·높이·두께·양을 비교하며 수학 언어를 익혀요." },
   { slug: "comparing2", name: "비교하기 기초 2", desc: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요." },
+  { slug: "compare", name: "수의 크기", desc: "두 수의 크기를 비교하며 부등호(<, >, =)를 익혀요." },
   { slug: "clock", name: "시계 보기", desc: "아날로그·디지털 시계를 읽는 법을 시·30분·15분 단위로 배워요." },
   // 덧셈 전 개념
   { slug: "combining", name: "모으기 연습", desc: "두 수를 합쳐 하나의 수를 만드는 수 합성을 연습해요." },
@@ -130,10 +132,12 @@ const appCatalog = [
   { slug: "plusthree", name: "더하기 3", desc: "3 더하기를 여러 학습 모드로 반복 연습해요." },
   { slug: "easy", name: "한 자리 덧셈", desc: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습." },
   { slug: "circle", name: "한 자리 덧셈 연습", desc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요." },
+  { slug: "carry", name: "받아올림 연습", desc: "두 자리 덧셈의 받아올림을 배열판·세로 형식으로 익혀요." },
   // 뺄셈
   { slug: "minusone", name: "빼기 1", desc: "수 배열판으로 -1 뺄셈을 직관적으로 익혀요." },
   { slug: "minustwo", name: "빼기 2", desc: "2 빼기를 배열판과 거꾸로 건너뛰기로 시각화해서 배워요." },
   { slug: "minusthree", name: "빼기 3", desc: "3 빼기를 여러 학습 모드로 반복 연습해요." },
+  { slug: "borrow", name: "받아내림 연습", desc: "두 자리 뺄셈의 받아내림을 배열판·세로 형식으로 익혀요." },
   // 곱셈
   { slug: "timestables", name: "구구단 연습", desc: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요." },
 ];
