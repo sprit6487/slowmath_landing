@@ -109,6 +109,7 @@ const appCatalog = [
   { slug: "dot2dot", name: "점선 따라 그리기", desc: "주어진 점-선 연결을 따라 그리며 시지각과 소근육을 키워요." },
   { slug: "colorcopy", name: "똑같이 맞추기", desc: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요." },
   { slug: "pattern", name: "패턴 연습", desc: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요." },
+  { slug: "sameshape", name: "같은 모양 찾기", desc: "여러 모양 중에서 같은 모양과 짝을 찾으며 시지각 변별을 훈련해요." },
   // 수 개념
   { slug: "number", name: "숫자 익히기", desc: "1부터 100까지 숫자를 보고·듣고·고르며 익혀요." },
   { slug: "numberdraw", name: "숫자 쓰기", desc: "0~9 숫자를 올바른 순서로 쓰는 법을 연습해요." },

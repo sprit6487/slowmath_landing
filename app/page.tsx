@@ -158,6 +158,16 @@ function IconPattern({ color }: { color: string }) {
   );
 }
 
+function IconSameShape({ color }: { color: string }) {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <polygon points="8,4 14,10 8,16 2,10" fill={color} opacity="0.7" />
+      <polygon points="20,12 26,18 20,24 14,18" fill={color} opacity="0.7" />
+      <line x1="11" y1="13" x2="17" y2="15" stroke={color} strokeWidth="1.2" strokeDasharray="2 1.5" opacity="0.55" />
+    </svg>
+  );
+}
+
 function IconPalette({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
@@ -350,6 +360,7 @@ const appEmoji: Record<string, string> = {
   slowmath_dot2dot: "···",
   slowmath_colorcopy: "🪞",
   slowmath_pattern: "🧩",
+  slowmath_sameshape: "🔷",
   slowmath_number: "🔢",
   slowmath_numberdraw: "5️⃣",
   slowmath_dice: "🎲",
@@ -530,6 +541,19 @@ const apps: App[] = [
       "패턴 인식은 수학적 사고력의 핵심이에요. 과일·색깔·도형 패턴을 단계적으로 학습하고, 선택 잠금 기능으로 사고력을 키워줍니다.",
     tags: ["규칙 찾기", "빈칸 채우기", "과일·도형", "다음 예측"],
     childEffect: "다음에 올 것을 스스로 찾아요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_sameshape",
+    name: "Same Shape",
+    korName: "같은 모양 찾기",
+    Icon: IconSameShape,
+    category: "basic",
+    shortDesc: "여러 모양 중에서 같은 모양과 짝을 찾으며 시지각 변별을 훈련해요",
+    value:
+      "네모·세모·동그라미부터 별·하트·오각형까지 10가지 도형을 활용해 모양을 변별하는 능력을 키워요. 단일·그룹 고르기, 색깔 변별, 짝꿍 찾기까지 단계적으로 도전하며 시지각 처리를 훈련합니다.",
+    tags: ["같은 모양", "시지각", "색깔 변별", "짝꿍 찾기"],
+    childEffect: "같은 것과 다른 것을 구분해요",
     duration: "5분",
   },
 
@@ -1412,7 +1436,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 27개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 28개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1756,7 +1780,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            27개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            28개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
