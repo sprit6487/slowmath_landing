@@ -133,6 +133,7 @@ const appCatalog = [
   { slug: "easy", name: "한 자리 덧셈", desc: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습." },
   { slug: "circle", name: "한 자리 덧셈 연습", desc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요." },
   { slug: "carry", name: "받아올림 연습", desc: "두 자리 덧셈의 받아올림을 배열판·세로 형식으로 익혀요." },
+  { slug: "moneycalc", name: "돈 계산하기", desc: "동전과 지폐로 가격을 맞추거나 합계를 골라요 — 덧셈의 실생활 응용." },
   // 뺄셈
   { slug: "minusone", name: "빼기 1", desc: "수 배열판으로 -1 뺄셈을 직관적으로 익혀요." },
   { slug: "minustwo", name: "빼기 2", desc: "2 빼기를 배열판과 거꾸로 건너뛰기로 시각화해서 배워요." },

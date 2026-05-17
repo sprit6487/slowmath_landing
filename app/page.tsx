@@ -256,6 +256,19 @@ function IconCoins({ color }: { color: string }) {
   );
 }
 
+function IconMoneyCalc({ color }: { color: string }) {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      {/* 가격표 */}
+      <path d="M5 4 L13 4 L23 14 L14 23 L5 14 Z" fill={color} fillOpacity=".18" stroke={color} strokeWidth="1.5" strokeLinejoin="round"/>
+      <circle cx="9" cy="8" r="1.6" fill="none" stroke={color} strokeWidth="1.2"/>
+      {/* 동전 (오른쪽 아래) */}
+      <circle cx="20" cy="20" r="5" fill={color} fillOpacity=".5" stroke={color} strokeWidth="1.3"/>
+      <text x="20" y="23" textAnchor="middle" fontSize="6" fontWeight="800" fill="#fff">₩</text>
+    </svg>
+  );
+}
+
 function IconBorrow({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
@@ -380,6 +393,7 @@ const appEmoji: Record<string, string> = {
   slowmath_easy: "➕",
   slowmath_circle: "➕",
   slowmath_carry: "🆙",
+  slowmath_moneycalc: "💰",
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
@@ -809,6 +823,19 @@ const apps: App[] = [
       "두 자리 수 덧셈의 핵심인 받아올림을 가르기·보수와 배열판이라는 두 가지 직관적 방법으로 분리해 학습해요. 드래그 인터랙션으로 '10을 만든다'는 감각을 손과 눈으로 함께 익힙니다.",
     tags: ["받아올림", "10 만들기", "가르기", "배열판", "드래그"],
     childEffect: "10을 먼저 만들 줄 알아요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_moneycalc",
+    name: "Money Calc",
+    korName: "돈 계산하기",
+    Icon: IconMoneyCalc,
+    category: "add",
+    shortDesc: "동전과 지폐로 가격을 맞추거나 합계를 골라요",
+    value:
+      "교실의 덧셈을 실생활(돈)로 옮긴 응용 단계. 가격표 보고 돈 모으기 / 모은 돈 보고 가격 맞추기 두 방향을 동전만·지폐만·동전과 지폐 세 가지 난이도로 반복 연습해요.",
+    tags: ["돈 계산", "동전·지폐", "합산", "실생활 응용"],
+    childEffect: "용돈을 세고 가격을 가늠해요",
     duration: "5분",
   },
 
@@ -1436,7 +1463,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 30개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 31개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1780,7 +1807,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            30개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            31개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
