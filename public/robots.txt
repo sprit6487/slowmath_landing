@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+# Googlebot이 페이지를 렌더링하려면 빌드 산출물(JS/CSS chunks) 접근이 필요 → /_next/static/ 명시적 허용
+Allow: /_next/static/
 Disallow: /_next/
 
 Sitemap: https://slowkids.net/sitemap.xml
